@@ -1,6 +1,4 @@
-const dummy = (blogs) => {
-  return 1
-}
+
 
 const totalLikes = (blogs) => {
   var likes = blogs.reduce((sum, blog) => sum + blog.likes, 0)
@@ -36,7 +34,7 @@ const mostBlogs = (blogs) => {
   var authorObjectList = []
   console.log(authors)
   while (i < authors.length) {
-    console.log("obj", authorObjectList)
+    console.log('obj', authorObjectList)
     var s = 0
     var check = false
     while (s < authorObjectList.length) {
@@ -64,14 +62,14 @@ const mostBlogs = (blogs) => {
 
   }
   var most = authorObjectList[0]
-  console.log("most", most)
-  for (var i = 0; i < authorObjectList.length - 1; i++) {
-    console.log("most ", most.blogs, " au ", authorObjectList[i+1].blogs)
+  console.log('most', most)
+  for (i = 0; i < authorObjectList.length - 1; i++) {
+    console.log('most ', most.blogs, ' au ', authorObjectList[i+1].blogs)
     if (most.blogs < authorObjectList[i + 1].blogs) {
       most = authorObjectList[i + 1]
     }
   }
-  console.log("most2", most)
+  console.log('most2', most)
   return most
 
 }
@@ -79,9 +77,9 @@ const mostBlogs = (blogs) => {
 const mostLikes = (blogs) => {
   var i = 0
   var authorObjectList = []
-  
+
   while (i < blogs.length) {
-    console.log("obj", authorObjectList)
+    console.log('obj', authorObjectList)
     var s = 0
     var check = false
     while (s < authorObjectList.length) {
@@ -109,20 +107,19 @@ const mostLikes = (blogs) => {
 
   }
   var most = authorObjectList[0]
-  console.log("most", most)
-  for (var i = 0; i < authorObjectList.length - 1; i++) {
-    console.log("most ", most.likes, " au ", authorObjectList[i+1].likes)
+  console.log('most', most)
+  for (i = 0; i < authorObjectList.length - 1; i++) {
+    console.log('most ', most.likes, ' au ', authorObjectList[i+1].likes)
     if (most.likes < authorObjectList[i + 1].likes) {
       most = authorObjectList[i + 1]
     }
   }
-  console.log("most2", most)
+  console.log('most2', most)
   return most
 
 }
 
 module.exports = {
-  dummy,
   totalLikes,
   favoriteBlog,
   mostBlogs,
